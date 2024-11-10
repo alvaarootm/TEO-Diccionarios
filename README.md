@@ -27,7 +27,7 @@ Resuelve los siguientes ejercicios:
 6. Dado un diccionario de titulos y años, devuelva el título con más caracteres.
 
 
-En segundo lugar vamos a trabajar con una `namedtuple` que representa una carta de la baraja española, y tiene dos campos: palo,de tipo `str`,  que puede tomar los valores "Oros", "Copas","Espadas" y "Bastos"; y valor, de tipo `int`, que representa un número del 1 al 12 con el valor numérico de la carta.
+En segundo lugar vamos a trabajar con una `NamedTuple` que representa una carta de la baraja española, y tiene dos campos: palo,de tipo `str`,  que puede tomar los valores "Oros", "Copas","Espadas" y "Bastos"; y valor, de tipo `int`, que representa un número del 1 al 12 con el valor numérico de la carta.
 
 ```python
 Carta = NamedTuple("Carta", [("palo",str),("valor",int)])

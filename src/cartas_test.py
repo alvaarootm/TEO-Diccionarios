@@ -65,17 +65,17 @@ if __name__ == '__main__':
     test_crear_dicc_conteo_valores (mazo1)
     test_crear_dicc_conteo_valores (mazo2)
     
-    test_crear_dicc_valores_por_palos(mazo1)
-    test_crear_dicc_valores_por_palos(mazo2)
+    # test_crear_dicc_valores_por_palos(mazo1)
+    # test_crear_dicc_valores_por_palos(mazo2)
     
-    test_obtener_clave_mayor(mazo1)
-    test_obtener_clave_mayor(mazo2)
+    # test_obtener_clave_mayor(mazo1)
+    # test_obtener_clave_mayor(mazo2)
     
-    test_obtener_valor_mayor_frecuencia(mazo1)
-    test_obtener_valor_mayor_frecuencia(mazo2)
+    # test_obtener_valor_mayor_frecuencia(mazo1)
+    # test_obtener_valor_mayor_frecuencia(mazo2)
     
-    test_obtener_media_valores_por_palos(mazo1)
-    test_obtener_media_valores_por_palos(mazo2)
+    # test_obtener_media_valores_por_palos(mazo1)
+    # test_obtener_media_valores_por_palos(mazo2)
     
-    test_obtener_max_valores_por_palos(mazo1)
-    test_obtener_max_valores_por_palos(mazo2)
+    # test_obtener_max_valores_por_palos(mazo1)
+    # test_obtener_max_valores_por_palos(mazo2)

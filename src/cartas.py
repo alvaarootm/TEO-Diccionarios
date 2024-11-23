@@ -15,7 +15,13 @@ def crear_dicc_conteo_valores (cartas:list[Carta])->dict[int, int]:
     :return: Un diccionario que tiene como clave los valores de las cartas y como valores el número de cartas (frecuencia) con ese valor
     :rtype: {int:int}
     '''
-    pass
+    dicc = dict()
+    for carta in cartas:
+        if carta.valor in dicc:
+            dicc[carta.valor] = dicc[carta.valor] + 1
+        else:
+            dicc[carta.valor] = 1
+    return dicc
 
 def crear_dicc_valores_por_palos (cartas:list[Carta])->dict[str, list[int]]:
     '''
@@ -26,8 +32,14 @@ def crear_dicc_valores_por_palos (cartas:list[Carta])->dict[str, list[int]]:
     :return: Un diccionario que tiene como clave los palos y como valores una lista con los valores de las cartas de ese palo
     :rtype: {str:[int]}
     '''
-    pass
-
+    dicc = dict()
+    for carta in cartas:
+        clave = carta.palo
+        if clave in dicc:
+            dicc[clave] += carta.valor
+        else:
+            dicc[clave] = [carta.valor]
+    return dicc
 
 def obtener_clave_mayor(dicc:dict[int, int])->int:
     '''

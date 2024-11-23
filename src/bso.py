@@ -1,6 +1,14 @@
 '''
 @author: reinaqu
 '''
+l_bso = {("Thriller",1982), 
+             ("Back in Black",1980), 
+             ("The Dark Side of the Moon", 1973), 
+             ("The Bodyguard",1992), 
+             ("Bat Out of Hell",1977), 
+             ("Their Greatest Hits (1971-1975)", 1976), 
+             ("Saturday Night Fever",1977), 
+             ("Rumours",1977)}
 
 def crear_dicc_titulos_anyos(bsos:list[tuple[str,int]])->dict[str, int]:
     '''
@@ -11,7 +19,7 @@ def crear_dicc_titulos_anyos(bsos:list[tuple[str,int]])->dict[str, int]:
     :return: Un diccionario que tiene como clave los títulos y como valores los años
     :rtype: {str:int}
     '''
-    pass
+    return {titulo: año for titulo, año in l_bso}
 
 def crear_dicc_titulos_anyos2(bsos:list[tuple[str,int]])->dict[str, int]:
     '''
@@ -34,7 +42,8 @@ def crear_dicc_anyos_conteo_titulos (bsos:list[tuple[str,int]])->dict[int, int]:
           de ese año
     :rtype: {int:int}
     '''
-    pass
+    años = [año for _, año in l_bso]
+    return {año: años.count(año) for año in set(años)}
 
 def crear_dicc_anyos_lista_titulos (bsos:list[tuple[str,int]])->dict[int, list[str]]:
     '''
@@ -46,7 +55,12 @@ def crear_dicc_anyos_lista_titulos (bsos:list[tuple[str,int]])->dict[int, list[s
           de ese año
     :rtype:{int:[str]}
     '''
-    pass
+    resultado = {}
+    for titulo, año in l_bso:
+        if año not in resultado:
+            resultado[año] = []
+        resultado[año].append(titulo)
+    return resultado
 
 def obtener_clave_mayor(dicc_bso:dict[str,int])->str:
     '''

@@ -19,7 +19,7 @@ def crear_dicc_titulos_anyos(bsos:list[tuple[str,int]])->dict[str, int]:
     :return: Un diccionario que tiene como clave los títulos y como valores los años
     :rtype: {str:int}
     '''
-    return {titulo: año for titulo, año in l_bso}
+    return {bso:anyo for bso, anyo in bsos}
 
 def crear_dicc_titulos_anyos2(bsos:list[tuple[str,int]])->dict[str, int]:
     '''
@@ -30,7 +30,10 @@ def crear_dicc_titulos_anyos2(bsos:list[tuple[str,int]])->dict[str, int]:
     :return: Un diccionario que tiene como clave los títulos y como valores los años
     :rtype: {str:int}
     '''
-    pass
+    res = {}
+    for bso, anyo in bsos:
+        res[bso] = anyo
+    return res
 
 def crear_dicc_anyos_conteo_titulos (bsos:list[tuple[str,int]])->dict[int, int]:
     '''
@@ -42,7 +45,7 @@ def crear_dicc_anyos_conteo_titulos (bsos:list[tuple[str,int]])->dict[int, int]:
           de ese año
     :rtype: {int:int}
     '''
-    años = [año for _, año in l_bso]
+    años = [año for _, año in bsos]
     return {año: años.count(año) for año in set(años)}
 
 def crear_dicc_anyos_lista_titulos (bsos:list[tuple[str,int]])->dict[int, list[str]]:
@@ -56,7 +59,7 @@ def crear_dicc_anyos_lista_titulos (bsos:list[tuple[str,int]])->dict[int, list[s
     :rtype:{int:[str]}
     '''
     resultado = {}
-    for titulo, año in l_bso:
+    for titulo, año in bsos:
         if año not in resultado:
             resultado[año] = []
         resultado[año].append(titulo)

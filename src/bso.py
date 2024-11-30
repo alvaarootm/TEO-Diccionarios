@@ -74,7 +74,10 @@ def obtener_clave_mayor(dicc_bso:dict[str,int])->str:
     :return: La clave con valor mayor, segun el orden natural
     :rtype: str
     '''
-    pass
+    max_anyo = max(dicc_bso.values())
+    for titulo, anyo in dicc_bso.items():
+        if anyo == max_anyo:
+            return titulo
 
 def obtener_valor_mayor(dicc_bso:dict[str,int])->int:
     '''
@@ -85,7 +88,7 @@ def obtener_valor_mayor(dicc_bso:dict[str,int])->int:
     :return: El valor mayor, que en este caso es el año más reciente.
     :rtype: int
     '''
-    pass
+    return max(dicc_bso.values())
 
 def obtener_nombre_mas_largo(dicc_bso:dict[str,int])->str:
     '''
@@ -96,4 +99,4 @@ def obtener_nombre_mas_largo(dicc_bso:dict[str,int])->str:
     :return: El nombre de la canción con más caracteres
     :rtype: str
     '''
-    pass
+    return max(dicc_bso.keys(), key=len)
